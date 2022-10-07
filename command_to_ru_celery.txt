@@ -1,0 +1,2 @@
+1.celery -A stockproject.celery worker -l info
+2.celery -A stockproject beat -l INFO
