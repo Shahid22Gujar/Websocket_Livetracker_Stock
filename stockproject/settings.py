@@ -156,7 +156,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     },
 
 # }
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 #For Heroku Setup
 CELERY_BROKER_URL = os.environ['REDIS_URL']
 CELERY_RESULT_BACKEND = 'django-db'
