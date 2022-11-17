@@ -1,0 +1,35 @@
+{% extends "mainapp/base.html" %}
+{% load static %}
+{% block title %}
+Stock Picker
+{% endblock title %}
+{% block css %}
+<style></style>
+{% endblock css %}
+{% block body %}
+
+<div class="container w-50">
+<h1>Live Data</h1>
+<p>Select Your Favourite Stock</p>
+
+<form action="stocktracker/" >
+<label for='stockpicker'>Stocks:</label>
+{% csrf_token %}
+    <select class="form-select select-form-lg mb-3" multiple aria-label="multiple select example" name="stockpicker">
+  <option selected>Open this select menu</option>
+
+ {% for i in stockpicker %}
+  <option value="{{i}}">{{i}}</option>
+ {% endfor %}
+  
+</select>
+<div class="d-grip gap-2">
+<input type="submit" value="Submit" class="btn btn-primary" >
+</div>
+</form>
+
+</div>
+{% endblock body %}
+{% block js %}
+<script></script>
+{% endblock js %}
