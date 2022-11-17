@@ -158,7 +158,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # }
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 #For Heroku Setup
-CELERY_BROKER_URL = os.environ['REDIS_URL']
+# CELERY_BROKER_URL = os.environ['REDIS_URL']
+CELERY_BROKER_URL = "redis-17351.c16.us-east-1-2.ec2.cloud.redislabs.com:17351"
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_ACCEPT_CONTENT_TYPE = 'application/json'
 CELERY_RESULT_SERIALIZER = 'json'
