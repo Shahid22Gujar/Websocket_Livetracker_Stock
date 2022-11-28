@@ -14,3 +14,5 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'stockproject.settings')
 
 application = get_wsgi_application()
+#app is for vercel only app is recognized by vercel
+app=application
